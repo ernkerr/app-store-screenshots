@@ -1,0 +1,14 @@
+# Dependencies (the editor template is scaffolded + installed per-app, not here)
+node_modules/
+**/node_modules/
+
+# Build / export artifacts
+.next/
+**/.next/
+/tmp/
+*-export/
+.export/
+
+# OS / editor cruft
+.DS_Store
+*.log
