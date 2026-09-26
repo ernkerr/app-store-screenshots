@@ -142,6 +142,9 @@ accent color right, no glow, screenshots seated in the frame, headlines not
 clipped. Surface the finished slides to the user (e.g. `SendUserFile`). Mention
 the live editor URL so they can tweak copy/layout and re-export.
 
+**Next:** the `app-store-connect-setup` skill (sibling folder) creates the App
+Store Connect listing and uploads these Desktop folders to it.
+
 ## Editing after the first pass
 
 The deck auto-saves to `app-store-screenshots.json`. To change copy/colors,
