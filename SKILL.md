@@ -130,6 +130,11 @@ node "$SKILL/scripts/export-bundle.cjs" --project "$DEST" --device iphone
 node "$SKILL/scripts/export-bundle.cjs" --project "$DEST" --device ipad
 ```
 
+If port 3000 is already taken (another project's dev server), `bun dev` fails
+with EADDRINUSE while the exporter silently loads the *other* app and times
+out waiting for "Export bundle". Check with `lsof -iTCP:3000 -sTCP:LISTEN`,
+then run `bun dev --port <free>` and pass `--port <free>` to the exporter.
+
 Each prints `ZIP:<path>`. Unzip and copy onto the Desktop in the structure under
 "What you produce". The primary iPhone size lives at `ios/iphone/1320x2868/en/`,
 the primary iPad at `ios/ipad/2064x2752/en/`. Restore `"device": "iphone"` in the
